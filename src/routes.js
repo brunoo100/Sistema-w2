@@ -14,7 +14,7 @@ export default function AppRoutes() {
     <BrowserRouter>
       <Routes>
         {/* Rotas públicas */}
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         
         {/* Rotas privadas */}
         <Route path="/home" element={<PrivateRoute element={Home} />} />

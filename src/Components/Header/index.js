@@ -8,7 +8,7 @@ export default function Header() {
 
   const sair = async () => {
     await supabase.auth.signOut(); // Certifique-se de que a função é assíncrona
-    navigate('/login'); // Redireciona para o login após o logout
+    navigate('/'); // Redireciona para o login após o logout
   };
 
   return (
