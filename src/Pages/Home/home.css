@@ -1,43 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body{
-    background-color: #04040C;
-    color: #fff;
-    font-family: 'inter', sans-serif;
+body {
+  background-color: #04040C;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
 }
 
-.container-home{
-    display: flex;
-    width: 100%;
-
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 80px);
-
+.container-home {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
 }
 
-.container-home img{
-    width: 500px;
+.container-home img {
+  width: 500px;
 }
 
-.container-home p{
-    margin-top: 20px;
+.container-home p {
+  margin-top: 20px;
 }
 
-.home{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.text-home p{
-    font-size: 30px;
-    font-weight: bold;
-    width: 600px;
-    max-width: 100%;
-    margin-top: 20px;
-    text-align: center;
+.text-home p {
+  font-size: 30px;
+  font-weight: bold;
+  width: 600px;
+  max-width: 100%;
+  margin-top: 20px;
+  text-align: center;
 }
- 
+
+/* Adicionar consultas de mídia para telas menores (como dispositivos móveis) */
+
+@media (max-width: 768px) {
+  .container-home img {
+    width: 80%; /* Ajustar a largura da imagem para ser menor em telas pequenas */
+  }
+
+  .text-home p {
+    font-size: 24px; /* Reduzir o tamanho da fonte para telas menores */
+    width: 90%; /* Reduzir a largura para que o texto se ajuste melhor */
+  }
+}
+
+@media (max-width: 480px) {
+  .container-home img {
+    width: 100%; /* A imagem vai ocupar toda a largura disponível */
+  }
+
+  .text-home p {
+    font-size: 18px; /* Ajuste de fonte para uma leitura mais confortável em smartphones */
+    width: 100%; /* Deixa o texto ocupar 100% da largura da tela */
+  }
+
+  .home {
+    padding: 20px; /* Adiciona um pouco de padding para evitar que o conteúdo toque nas bordas da tela */
+  }
+}

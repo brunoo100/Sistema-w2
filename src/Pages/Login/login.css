@@ -1,28 +1,31 @@
-*{
+* {
     color: #fff;
-
-}
-.container-login{
+    box-sizing: border-box;
+  }
+  
+  .container-login {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #04040C;
-}
-
-.left-login{
+    flex-wrap: wrap;
+  }
+  
+  .left-login {
     width: 50vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.left-login img{
+  }
+  
+  .left-login img {
     width: 30vw;
-}
-
-.right-login{
+  }
+  
+  .right-login {
     width: 50vw;
     height: 100vh;
     display: flex;
@@ -30,16 +33,20 @@
     justify-content: center;
     align-items: center;
     background-color: #202020;
-}
-
-.card-login{
+  }
+  
+  .card-login {
     width: 60%;
     display: flex;
     flex-direction: column;
     margin: 10px 0px;
     padding: 30px 35px;
-}
-.card-login input, button{
+    background-color: #282828;
+    border-radius: 8px;
+  }
+  
+  .card-login input,
+  .card-login button {
     width: 100%;
     margin: 5px 0px;
     padding: 10px 15px;
@@ -48,9 +55,10 @@
     border-radius: 4px;
     font-size: 16px;
     color: #f7f7f7;
-}
-
-.card-login button{
+    background-color: #383838;
+  }
+  
+  .card-login button {
     background-color: #ADFF45;
     color: #fff;
     cursor: pointer;
@@ -58,24 +66,49 @@
     font-size: 20px;
     margin-top: 10px;
     transition: all 0.3s ease;
-}
-.card-login button:hover{
+  }
+  
+  .card-login button:hover {
     background-color: #00ff0d;
     color: #fff;
     transform: scaleX(1.1);
     font-weight: bold;
     font-size: 25px;
-}
-.card-login h1{
+  }
+  
+  .card-login h1 {
     text-align: center;
     color: #ADFF45;
     font-size: 40px;
     margin-bottom: 20px;
-}
-
-.card-login p{
+  }
+  
+  .card-login p {
     text-align: center;
     color: #fff;
     font-size: 18px;
     margin-top: 4px;
-}
+  }
+  
+  /* Adaptar para telas menores */
+  @media (max-width: 768px) {
+    .container-login {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .left-login {
+  display: none;
+    }
+  
+    .right-login {
+      width: 100%;
+      height: 100vh;
+    }
+  
+    .card-login {
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+    }
+  }

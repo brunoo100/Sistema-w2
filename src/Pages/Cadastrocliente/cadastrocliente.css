@@ -1,57 +1,110 @@
 .container-cadastrocliente {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #04040C; /* Dark background */
-    margin-top: 25px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #04040C; /* Dark background */
+  margin-top: 25px;
+}
+
+.card {
+  background-color: #282828; /* Slightly lighter background for card */
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Faz o card ocupar toda a largura disponível */
+  max-width: 600px; /* Limita a largura máxima do card */
+}
+
+h1 {
+  color: #fff; /* White text */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  color: #fff; /* White text */
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #fff; /* White text */
+  background-color: #383838; /* Slightly darker background for inputs */
+  font-size: 16px;
+}
+
+button {
+  background-color: #4CAF50; /* Green button */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%; /* Botão ocupa toda a largura disponível */
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px; /* Ajuste conforme necessário */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  resize: vertical;
+  color: #000;
+}
+
+/* Adaptações para telas pequenas (como smartphones) */
+@media (max-width: 768px) {
   .card {
-    background-color: #282828; /* Slightly lighter background for card */
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px; /* Menos padding para otimizar o espaço */
+    max-width: 90%; /* Card pode ocupar mais espaço na tela */
   }
-  
+
   h1 {
-    color: #fff; /* White text */
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Reduz o tamanho do título em telas pequenas */
   }
-  
-  label {
-    color: #fff; /* White text */
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    color: #fff; /* White text */
-    background-color: #383838; /* Slightly darker background for inputs */
-  }
-  
+
+  input,
+  textarea,
   button {
-    background-color: #4CAF50; /* Green button */
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+    font-size: 14px; /* Reduz o tamanho da fonte dos inputs e botões */
+    padding: 8px; /* Ajusta o padding para telas menores */
   }
-  
+
   textarea {
-    width: 100%; /* Ocupa 100% da largura do container */
-    height: 100px; /* Ajuste conforme necessário */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
-    resize: vertical;
-    color: #000;
+    height: 80px; /* Ajusta a altura da área de texto */
   }
+
+  button {
+    padding: 12px 20px; /* Ajusta o padding do botão */
+  }
+}
+
+/* Adaptação para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+  .container-cadastrocliente {
+    margin-top: 15px; /* Reduz a margem superior */
+  }
+
+  .card {
+    padding: 15px; /* Menos padding no card para aproveitar o espaço */
+  }
+
+  input,
+  textarea {
+    padding: 6px; /* Diminui o padding para dispositivos pequenos */
+  }
+
+  button {
+    font-size: 14px; /* Reduz o tamanho da fonte do botão */
+    padding: 10px 15px; /* Ajusta o tamanho do botão */
+  }
+}

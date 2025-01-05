@@ -72,7 +72,7 @@ export default function RelatorioServicos() {
       {servicos.length > 0 ? (
         <div className="servicos-lista">
           <h2>Todos os Serviços</h2>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+          <table >
             <thead>
               <tr>
                 <th>Placa</th>

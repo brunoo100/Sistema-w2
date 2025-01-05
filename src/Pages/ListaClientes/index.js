@@ -63,7 +63,7 @@ export default function ListaClientes() {
       {clientes.length > 0 ? (
         <div className="servicos-lista">
           <h2>Todos os Clientes</h2>
-          <table style={{ width: "%", borderCollapse: "collapse" }}>
+          <table>
             <thead>
               <tr>
                 <th>Nome</th>

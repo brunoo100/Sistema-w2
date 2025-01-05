@@ -1,68 +1,156 @@
 /* Estilos para o container do relatório */
 .container-relatorio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  padding: 0 10px; /* Adiciona um pequeno padding para evitar que o conteúdo fique colado nas bordas */
+}
+
+/* Estilo do título */
+h1 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos para a tabela */
+table {
+  width: 90%;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-x: auto; /* Permite rolagem horizontal se a tabela for larga */
+}
+
+/* Estilo das células da tabela */
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  color: #ffffff;
+}
+
+/* Estilo das células de cabeçalho */
+th {
+  background-color: #ADFF45;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Estilo da lista de serviços */
+.servicos-lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  width: 100%; /* Garantir que ocupe toda a largura disponível */
+  box-sizing: border-box; /* Garante que o padding e margem não afetem a largura */
+}
+
+/* Estilo da célula com a data de criação */
+.data-criacao {
+  background-color: #202020;
+}
+
+/* Estilo dos filtros */
+.filtro-placa, .filtro-cpf {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  margin-bottom: 15px; /* Adiciona espaço abaixo dos filtros */
+}
+
+/* Estilo das células de dados */
+td {
+  background-color: #202020;
+}
+
+/* Estilo para mensagens de erro */
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos para as linhas da tabela */
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* Ajustes para telas menores (dispositivos móveis) */
+
+/* Para dispositivos com tela menor que 768px */
+@media (max-width: 768px) {
+  table {
+    width: 100%; /* A tabela ocupará toda a largura da tela em dispositivos menores */
+    overflow-x: auto; /* Habilita rolagem horizontal se necessário */
+  }
+
+  th, td {
+    padding: 10px; /* Ajuste o padding das células */
+    font-size: 14px; /* Ajusta o tamanho da fonte para dispositivos menores */
+  }
+
+  h1 {
+    font-size: 20px; /* Tamanho do título ajustado */
+  }
+
+  .error {
+    font-size: 16px; /* Ajuste o tamanho da fonte do erro */
+  }
+}
+
+/* Para dispositivos com tela menor que 480px */
+@media (max-width: 480px) {
+  table {
+    width: 100%; /* A tabela ocupará 100% da largura da tela */
+  }
+
+  .servicos-lista {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    margin: 0 auto;
     font-family: Arial, sans-serif;
     max-width: 100%;
+    width: 100%; /* Garante que ocupe 100% da largura da tela */
   }
-  
-  /* Estilo do título */
-  h1 {
-    margin-top: 20px;
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  /* Estilos para a tabela */
-  table {
-    width: 90%;
-    border: 1px solid #ddd;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
+
   th, td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-    color: #ffffff;
+    padding: 8px; /* Menos padding para telas muito pequenas */
+    font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
   }
-  
-  th {
-    background-color: #ADFF45;
-    font-weight: bold;
-    color: #000000;
+
+  h1 {
+    font-size: 18px; /* Título com fonte reduzida em telas muito pequenas */
   }
-  .data-criacao{
-    background-color: #202020;
-  }
-  td {
-    background-color: #202020;
-  }
-  
-  /* Estilo para o erro */
+
   .error {
-    color: red;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 14px; /* Ajuste o tamanho da fonte do erro */
   }
-  
-  /* Estilos para as linhas da tabela */
-  tbody tr:hover {
-    background-color: #f9f9f9;
+
+  .filtro-placa, .filtro-cpf {
+    flex-direction: column; /* Alinha os filtros de forma vertical em telas muito pequenas */
+    gap: 5px; /* Menor espaçamento entre os filtros */
   }
-  
-  tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  tbody tr:nth-child(odd) {
-    background-color: #fff;
-  }
-  
+}
