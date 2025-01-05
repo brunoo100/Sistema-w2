@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-color: #04040C;
+    color: #fff;
+    font-family: 'inter', sans-serif;
+}
+
+.container-home{
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+
+}
+
+.container-home img{
+    width: 500px;
+}
+
+.container-home p{
+    margin-top: 20px;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-home p{
+    font-size: 30px;
+    font-weight: bold;
+    width: 600px;
+    max-width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+ 

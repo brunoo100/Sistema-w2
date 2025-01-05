@@ -1,0 +1,57 @@
+.container-cadastrocliente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #04040C; /* Dark background */
+    margin-top: 25px;
+  }
+  
+  .card {
+    background-color: #282828; /* Slightly lighter background for card */
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    color: #fff; /* White text */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    color: #fff; /* White text */
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #fff; /* White text */
+    background-color: #383838; /* Slightly darker background for inputs */
+  }
+  
+  button {
+    background-color: #4CAF50; /* Green button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  textarea {
+    width: 100%; /* Ocupa 100% da largura do container */
+    height: 100px; /* Ajuste conforme necessário */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    resize: vertical;
+    color: #000;
+  }
